@@ -18,13 +18,13 @@
 }
 
 .full-height .subtitle {
-  padding-bottom: 14px;
-  min-height: 150px;
-  
+  min-height: 31px;
+  font-weight: 400;
 }
 
 .full-height .descricao {
   min-height: 140px;
+  font-weight: 400;
 }
 
 .full-height .actions {
