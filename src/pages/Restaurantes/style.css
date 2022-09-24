@@ -1,3 +1,47 @@
 .restaurantes .sub-header span {
   color: #DEDDDD;
+  flex-direction: column;
+}
+
+
+
+.restaurante img {
+  display: flex;
+  width: 90.44px;
+  height: 89px;
+
+  flex-direction: row;
+  padding: 20px;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+}
+
+.nome {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #828282;
+}
+
+.nota {
+
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #828282;
 }
