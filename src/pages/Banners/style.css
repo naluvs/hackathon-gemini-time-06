@@ -11,6 +11,8 @@
   display: flex;
   min-height: 64px;
   justify-content: center;
+ 
+
   
 }
 
@@ -20,12 +22,15 @@
 
 .full-height .subtitle {
   min-height: 31px;
-  font-weight: 400;
+  font-weight: 400; 
+  font-weight: bold;
 }
 
 .full-height .descricao {
   min-height: 140px;
   font-weight: 400;
+  font-weight: bold;
+
 }
 
 .full-height .actions {
