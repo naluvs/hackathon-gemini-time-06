@@ -16,9 +16,9 @@ function BannersPage() {
   const [listaBanners, setListaBanners] = useState([]);
   const [index, setIndex] = useState(0);
   const [loading, setLoading] = useState(true);
-  const selectedBanner = listaBanners[index];
+  const selectedBanner = listaBanners[index+3];
   const isFirst = index === 0;
-  const isLast = index === listaBanners.length - 1;
+  const isLast = index === 3;
 
   const getBanners = async () => {
     const result = await getAllBanners();
