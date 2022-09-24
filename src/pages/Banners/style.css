@@ -24,12 +24,14 @@
   min-height: 31px;
   font-weight: 400; 
   font-weight: bold;
+  font-size: 16px;
 }
 
 .full-height .descricao {
   min-height: 140px;
   font-weight: 400;
   font-weight: bold;
+  font-size: 10px;
 
 }
 
