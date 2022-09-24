@@ -48,7 +48,7 @@ function BannersPage() {
         <div className="title-home">
           <Typography
             className="title-home"
-            variant="h1"
+            variant="h3"
             align="center"
             color="primary"
           >
