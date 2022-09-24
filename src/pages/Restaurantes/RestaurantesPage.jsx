@@ -4,7 +4,7 @@ import { getRestaurantes } from "../../services/restaurantes.service";
 import "./style.css";
 import CategoriasPage from "../Categorias";
 import { useNavigate } from "react-router-dom";
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function RestaurantesPage() {
   const [nomeCategoria, setNomeCategoria] = useState([]);
@@ -35,17 +35,30 @@ function RestaurantesPage() {
         </div>
       )}
       <div className="sub-header">
-        <Typography variant="body1"color="primary">
+        <Typography variant="body1" color="primary">
           Baratinho <span>(</span>$ <span>$ $ $ $)</span>
         </Typography>
       </div>
       {restaurantesBaratinho?.map(restaurante => (
-        <div key={restaurante.id}>
-          {restaurante.nome}
+        <div key={restaurante.id} class="restaurante">
+          <div>
+          <img
+            src={restaurante.imagem}
+            alt={restaurante.name}
+            className="imgRestaurante"
+          />
+            </div>
+          <div class="infos">
+            <p class='nome'>{restaurante.nome}</p>
+            <p class='nota'>{restaurante.nota}</p>
+            <p class='distancia'>{restaurante.distancia}</p>
+            <p class= 'tempo_medio'>{restaurante.tempo_medio}</p>
+            <p class='valor_entrega'>{restaurante.valor_entrega}</p>
+          </div>
         </div>
       ))}
       <div className="sub-header">
-        <Typography variant="body1"color="primary">
+        <Typography variant="body1" color="primary">
           No preço <span>(</span>$ $ $ <span>$ $)</span>
         </Typography>
       </div>
@@ -55,7 +68,7 @@ function RestaurantesPage() {
         </div>
       ))}
       <div className="sub-header">
-        <Typography variant="body1"color="primary">
+        <Typography variant="body1" color="primary">
           Caro, mas vale a pena <span>(</span>$ $ $ $ $ <span>)</span>
         </Typography>
       </div>
@@ -64,7 +77,7 @@ function RestaurantesPage() {
           {restaurante.nome}
         </div>
       ))}
-    </Container> 
+    </Container>
   )
 }
 
