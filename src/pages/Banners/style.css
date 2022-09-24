@@ -11,6 +11,7 @@
   display: flex;
   min-height: 64px;
   justify-content: center;
+  
 }
 
 .full-height .MuiTypography-h5 {
@@ -20,7 +21,7 @@
 .full-height .subtitle {
   padding-bottom: 14px;
   min-height: 150px;
-  
+  font-weight: bold;
 }
 
 .full-height .descricao {
