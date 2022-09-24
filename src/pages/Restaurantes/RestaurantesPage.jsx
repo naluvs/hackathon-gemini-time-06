@@ -60,7 +60,7 @@ function RestaurantesPage() {
           {restaurante.nome}
         </div>
       ))}
-    </Container>
+    </Container> 
   )
 }
 
