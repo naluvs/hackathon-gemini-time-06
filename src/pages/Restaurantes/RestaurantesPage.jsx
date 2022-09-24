@@ -63,8 +63,21 @@ function RestaurantesPage() {
         </Typography>
       </div>
       {restaurantesNoPreco?.map(restaurante => (
-        <div key={restaurante.id}>
-          {restaurante.nome}
+        <div key={restaurante.id} class="restaurante">
+          <div>
+          <img
+            src={restaurante.imagem}
+            alt={restaurante.name}
+            className="imgRestaurante"
+          />
+            </div>
+          <div class="infos">
+            <p class='nome'>{restaurante.nome}</p>
+            <p class='nota'>{restaurante.nota}</p>
+            <p class='distancia'>{restaurante.distancia}</p>
+            <p class= 'tempo_medio'>{restaurante.tempo_medio}</p>
+            <p class='valor_entrega'>{restaurante.valor_entrega}</p>
+          </div>
         </div>
       ))}
       <div className="sub-header">
@@ -73,8 +86,21 @@ function RestaurantesPage() {
         </Typography>
       </div>
       {restaurantesCaro?.map(restaurante => (
-        <div key={restaurante.id}>
-          {restaurante.nome}
+        <div key={restaurante.id} class="restaurante">
+          <div>
+          <img
+            src={restaurante.imagem}
+            alt={restaurante.name}
+            className="imgRestaurante"
+          />
+            </div>
+          <div class="infos">
+            <p class='nome'>{restaurante.nome}</p>
+            <p class='nota'>{restaurante.nota}</p>
+            <p class='distancia'>{restaurante.distancia}</p>
+            <p class= 'tempo_medio'>{restaurante.tempo_medio}</p>
+            <p class='valor_entrega'>{restaurante.valor_entrega}</p>
+          </div>
         </div>
       ))}
     </Container>
