@@ -48,7 +48,9 @@ function CategoriasPage() {
 								className="imgCategory"
 							/>
 
-							<Typography className="textNames">{categoria.nome}</Typography>
+							<Typography className="textNames">{categoria.name}</Typography>
+							<Typography className="textNames">({categoria.total})</Typography>
+							
 						</div>
 					</Grid>
 				))}
