@@ -40,11 +40,11 @@ function CategoriasPage() {
 					<Grid item xs={4} key={categoria.id}>
 						<div
 							className="containerCategorias"
-							onClick={() => navigate(`/restaurantes/${categoria.id}`)}
+							onClick={() => navigate(`/restaurantes/${categoria.ID}`)}
 						>
 							<img
-								src={categoria.imagem}
-								alt={categoria.nome}
+								src={categoria.image + ".png"}
+								alt={categoria.name}
 								className="imgCategory"
 							/>
 
