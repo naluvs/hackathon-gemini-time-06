@@ -2,6 +2,9 @@ import { Container, Typography, CircularProgress } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import { getRestaurantes } from "../../services/restaurantes.service";
 import "./style.css";
+import CategoriasPage from "../Categorias";
+import { useNavigate } from "react-router-dom";
+import {useLocation} from 'react-router-dom';
 
 function RestaurantesPage() {
   const [nomeCategoria, setNomeCategoria] = useState([]);
@@ -9,9 +12,10 @@ function RestaurantesPage() {
   const [restaurantesNoPreco, setRestaurantesNoPreco] = useState([]);
   const [restaurantesCaro, setRestaurantesCaro] = useState([]);
   const [loading, setLoading] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
-    getRestaurantes().then((response) => {
+    getRestaurantes(location.state.id).then((response) => {
       setNomeCategoria(response.categoria)
       setRestaurantesBaratinho(response.baratinho);
       setRestaurantesNoPreco(response.no_preco);
@@ -31,7 +35,7 @@ function RestaurantesPage() {
         </div>
       )}
       <div className="sub-header">
-        <Typography variant="body1" color="primary">
+        <Typography variant="body1"color="primary">
           Baratinho <span>(</span>$ <span>$ $ $ $)</span>
         </Typography>
       </div>
@@ -40,7 +44,27 @@ function RestaurantesPage() {
           {restaurante.nome}
         </div>
       ))}
-    </Container>
+      <div className="sub-header">
+        <Typography variant="body1"color="primary">
+          No preço <span>(</span>$ $ $ <span>$ $)</span>
+        </Typography>
+      </div>
+      {restaurantesNoPreco?.map(restaurante => (
+        <div key={restaurante.id}>
+          {restaurante.nome}
+        </div>
+      ))}
+      <div className="sub-header">
+        <Typography variant="body1"color="primary">
+          Caro, mas vale a pena <span>(</span>$ $ $ $ $ <span>)</span>
+        </Typography>
+      </div>
+      {restaurantesCaro?.map(restaurante => (
+        <div key={restaurante.id}>
+          {restaurante.nome}
+        </div>
+      ))}
+    </Container> 
   )
 }
 
